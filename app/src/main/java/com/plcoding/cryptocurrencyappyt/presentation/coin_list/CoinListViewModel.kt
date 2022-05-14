@@ -5,7 +5,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.plcoding.cryptocurrencyappyt.common.Resource
-import com.plcoding.cryptocurrencyappyt.domain.use_case.get_coin.GetCoinUseCase
 import com.plcoding.cryptocurrencyappyt.domain.use_case.get_coins.GetCoinsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
