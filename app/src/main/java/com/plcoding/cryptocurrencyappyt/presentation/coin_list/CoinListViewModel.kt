@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class CoinListViewModel @Inject constructor(
     private val getCoinsUseCase: GetCoinsUseCase
-): ViewModel() {
+) : ViewModel() {
 
     private val _state = mutableStateOf(CoinListState())
     val state: State<CoinListState> = _state
@@ -25,9 +25,9 @@ class CoinListViewModel @Inject constructor(
 
     private fun getCoins() {
         getCoinsUseCase().onEach { result ->
-            when(result) {
+            when (result) {
                 is Resource.Success -> {
-                    _state.value =  CoinListState(coins = result.data ?: emptyList())
+                    _state.value = CoinListState(coins = result.data ?: emptyList())
                 }
                 is Resource.Error -> {
                     _state.value = CoinListState(
