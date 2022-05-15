@@ -41,16 +41,3 @@ data class CoinDetailDto(
     val type: String,
     val whitepaper: Whitepaper
 )
-
-fun CoinDetailDto.toCoinDetail(): CoinDetail {
-    return CoinDetail(
-        coinId = id,
-        name = name,
-        description = description,
-        symbol = symbol,
-        rank = rank,
-        isActive = isActive,
-        tags = tags.map { it.name },
-        team = team
-    )
-}
