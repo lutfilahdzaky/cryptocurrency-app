@@ -2,7 +2,6 @@ package com.plcoding.cryptocurrencyappyt.data.remote.dto
 
 
 import com.google.gson.annotations.SerializedName
-import com.plcoding.cryptocurrencyappyt.domain.model.CoinDetail
 
 data class CoinDetailDto(
     val description: String,
